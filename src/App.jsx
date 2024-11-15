@@ -68,7 +68,6 @@ function App() {
       setLoading(false);
     }
   };
-mu
   useEffect(() => {
     const token = localStorage.getItem('authToken');
     if (token) {
