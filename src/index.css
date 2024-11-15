@@ -1,0 +1,66 @@
+.modal-main {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(41, 41, 41, 0.384);
+    top: 0;
+    left: 0;
+    transition: all .4s linear;
+}
+
+.profile-modal {
+    width: 26%;
+    height: 55%;
+    background-color: rgb(128, 128, 128);
+    border-radius: 12px;
+    position: absolute;
+    top: 20%;
+    left: 37%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+.profile-modal form{
+    margin-top: 20px;
+}
+
+.profile-modal input {
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 7px 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 6px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+.profile-modal input::placeholder{
+    color: rgba(255, 255, 255, 0.63);
+}
+.profile-modal button {
+    margin-top: 40px;
+    background-color: white;
+    color: black;
+    font-size: 19px;
+    font-weight: bold;
+
+}
+button{
+    display: block;
+    padding: 7px 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 6px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.withdraw-modal{
+    width: 30%;
+    height: auto;
+    left: 35%;
+}

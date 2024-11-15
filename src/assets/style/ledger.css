@@ -1,0 +1,62 @@
+.history-box {
+    background-color: #e8e9eb10;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.89);
+}
+
+.history-box h2 ,h3 {
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    /* border-radius: 8px; */
+    /* border: 1px solid gray; */
+    overflow: hidden;
+    margin: 20px 0px;
+}
+
+thead th {
+    background-color: #3B364C;
+    padding: 22px 15px;
+
+}
+
+.refrel-data td {
+    padding: 14px 10px;
+    font-size: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.refrel-data img {
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+table tbody tr:hover {
+    background-color: rgba(211, 211, 211, 0.089);
+}
+
+/* Withdraw  */
+
+.withdraw-item {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.281);
+    border-bottom: 3px solid rgba(136, 125, 125, 0.205);
+}
+
+@media screen and (max-width:769px) {
+    .history-box{
+        margin: 0px auto;
+    }
+}
+@media screen and (max-width:426px) {
+    .ledger-user-info{
+        display: none;
+    }
+}

@@ -1,0 +1,8 @@
+.login-right{
+    padding: 70px 50px;
+}
+@media screen and (max-width:769px) {
+    .login-right{
+        padding: 70px 0px;
+    }   
+}

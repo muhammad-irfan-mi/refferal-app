@@ -1,0 +1,64 @@
+.question-box {
+    background-color: #e8e9eb10;
+    width: 70%;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .options-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .option-col {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+  }
+  
+  .submit-btn {
+    margin-top: 20px;
+    width: 28%;
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: rgba(128, 128, 128, 0.904);
+  }
+  .btn-submit-all{
+    width:70%; 
+    margin:20px auto;
+  }
+  
+  @media screen and (max-width: 426px) {
+    .question-header {
+      font-size: 1.10rem;
+      font-weight: 500;
+    }
+    .question-box {
+      width: 100%;
+      padding: 10px;
+      margin: 10px auto;
+    }
+    .submit-btn {
+      width: 39%;
+      padding: 10px 20px;
+    }
+    .btn-submit-all{
+      width:70%; 
+      margin:20px 0px;
+    }
+    
+  }

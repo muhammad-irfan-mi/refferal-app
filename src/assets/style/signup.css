@@ -1,0 +1,193 @@
+/* General container setup */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form {
+  color: #fff;
+  height: auto;
+  width: 65%;
+  background-color: #2B2738;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-form-left {
+  width: 49%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(58, 57, 57);
+}
+
+.signup-form-left img {
+  height: 445px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.signup-form-right {
+  width: 45%;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+}
+
+.signup-form-right h4 {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.signup-form input {
+  outline: none;
+  border: 1px solid #6E54B5;
+  background-color: #3B364C;
+  padding: 6px;
+  border-radius: 6px;
+  margin: 10px 0px;
+  width: 100%;
+  color: white;
+
+}
+
+.signup-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-name input {
+  width: 48%;
+
+}
+
+.signup-form button {
+  padding: 6px 12px;
+  width: 100%;
+  margin: 10px 0px;
+  background-color: #6E54B5;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Left panel styling */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.back-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.left-content {
+  text-align: center;
+  margin-top: auto;
+}
+
+.left-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Right panel styling */
+.right-panel {
+  background-color: #352d4a;
+  padding: 60px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p {
+  color: #ccc;
+}
+
+a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 12px 0;
+}
+
+.social-button {
+  color: white;
+  border: 1px solid #fff;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.social-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+@media screen and (max-width:1041px) {
+  .signup-form {
+    width: 85%;
+  }
+
+  .signup-form-left {
+    height: 447px;
+  }
+}
+
+@media screen and (max-width:769px) {
+  .signup-form {
+    width: 95%;
+  }
+
+  .signup-form-left {
+    height: 420px;
+  }
+  .signup-form-left img {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width:426px) {
+.signup-form{
+  flex-direction: column;
+}
+.signup-form-left {
+  width: 100%;
+}
+
+.signup-form-right {
+  width: 100%;
+}
+.signup-form-left {
+  height: 250px;
+}
+.signup-form-left img {
+  height: 250px;
+}
+}
+@media screen and (max-width:376px) {
+.signup-form-right {
+  padding: 10px 0px;
+}
+}
