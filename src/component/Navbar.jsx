@@ -10,7 +10,7 @@ import { FaTasks } from "react-icons/fa";
 
 
 
-import logo from '../assets/media/logo.jpg'
+import logo from '../assets/media/reffaralmoney.png'
 
 
 function Navbar() {
