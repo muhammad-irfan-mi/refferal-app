@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../assets/style/profile.css';
-import img from '../../assets/media/logo.jpg';
+import img from '../../assets/media/profile.png';
 import { FaCopy } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 import { GlobalContext } from '../../context/Global';
