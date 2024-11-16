@@ -114,13 +114,13 @@ function Signup() {
                                 <input type="text" name="lname" id="" value={formData.lname} placeholder='Last Name' onChange={handleInputChange} />
                             </div>
                             <div className="signup-email">
-                                <input type="text" name="email" id="" value={formData.email} placeholder='Email' onChange={handleInputChange} />
+                                <input type="email" name="email" id="" value={formData.email} placeholder='Email' onChange={handleInputChange} />
                             </div>
                             <div className="signup-password">
-                                <input type="text" name="password" id="" value={formData.password} placeholder='Enter  Password' onChange={handleInputChange} />
+                                <input type="password" name="password" id="" value={formData.password} placeholder='Enter  Password' onChange={handleInputChange} />
                             </div>
                             <div className="signup-password">
-                                <input type="text" name="confirmpassword" id="" value={formData.confirmpassword} placeholder='Confirm  Password' onChange={handleInputChange} />
+                                <input type="password" name="confirmpassword" id="" value={formData.confirmpassword} placeholder='Confirm  Password' onChange={handleInputChange} />
                             </div>
                             <div className="signup-refrel">
                                 <input type="text" name="referral" id="" value={formData.referral} placeholder='Refrerral Code (Optional)' onChange={handleInputChange} />

@@ -128,10 +128,10 @@ function Login() {
                                 <input type="text" name="fullName" id="" value={formData.fullName} placeholder='Full Name (Optional)' onChange={handleInputChange} />
                             </div> */}
                             <div className="signup-email">
-                                <input type="text" name="email" id="" value={formData.email} placeholder='Email' onChange={handleInputChange} />
+                                <input type="email" name="email" id="" value={formData.email} placeholder='Email' onChange={handleInputChange} />
                             </div>
                             <div className="signup-password">
-                                <input type="text" name="password" id="" value={formData.password} placeholder='Enter Password' onChange={handleInputChange} />
+                                <input type="password" name="password" id="" value={formData.password} placeholder='Enter Password' onChange={handleInputChange} />
                             </div>
                             <button type='submit'>Login</button>
                         </form>
