@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {BACK_URL} from '../../../ENV'
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -9,7 +10,7 @@ const ForgetPassword = () => {
   const handleForgotPassword = async () => {
     try {
       console.log({email})
-      const response = await axios.get(`http://localhost:3001/api/reset/${email}`);
+      const response = await axios.get(`${BACK_URL}/api/reset/${email}`);
       console.log({res_foget:response.data})
       setMessage(response.data.message);
     } catch (error) {

@@ -14,6 +14,7 @@ import img3 from '../../assets/media/signup3.jpg'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {BACK_URL} from '../../../ENV'
 
 
 function Signup() {
@@ -42,7 +43,7 @@ function Signup() {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:3001/api/signup', formData, {
+            const response = await axios.post(`${BACK_URL}/api/signup`, formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 }
@@ -67,7 +68,7 @@ function Signup() {
     useEffect(() => {
         const getOffer = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/offer')
+                const response = await axios.get(`${BACK_URL}/api/offer`)
                 const result = response.data
                 setOffer(result)
 
@@ -100,7 +101,7 @@ function Signup() {
                         >
                             {
                                 offer.map((offer, i) => {
-                                    return <SwiperSlide key={i}><img src={`http://localhost:3001${offer.imageUrl}`} alt="Loading Error" width={"100%"} /></SwiperSlide>
+                                    return <SwiperSlide key={i}><img src={`${BACK_URL}${offer.imageUrl}`} alt="Loading Error" width={"100%"} /></SwiperSlide>
                                 })
                             }
                         </Swiper>

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '../../assets/style/Task.css';
 import axios from 'axios';
 import { GlobalContext } from "../../context/Global";
+import {BACK_URL} from '../../../ENV'
 
 const Task = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -14,7 +15,7 @@ const Task = () => {
   useEffect(() => {
     const getTask = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/getQuestion');
+        const response = await axios.get(`${BACK_URL}/api/getQuestion`);
         const result = response.data;
         setTask(result);
       } catch (err) {
@@ -62,7 +63,7 @@ const Task = () => {
   }
   const handleAllSubmit = async () => {
     try {
-      const response = await axios.put(`http://localhost:3001/api/point/${userId}`, point, {
+      const response = await axios.put(`${BACK_URL}/api/point/${userId}`, point, {
         headers: {
           'Content-Type': 'application/json',
         }
@@ -78,7 +79,6 @@ const Task = () => {
   }
   return (
     <div className="container mt-5">
-      {/* <h1 className="text-center text-light">Your point is : {number}</h1> */}
       {task.map((question) => (
         <div key={question._id} className="question-box">
           <div className="question-header">{question.questionText}</div>

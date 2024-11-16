@@ -16,6 +16,7 @@ import axios from 'axios';
 import { GlobalContext } from './context/Global';
 import ForgetPassword from './Pages/Authentiction/ForgetPassword';
 import ResetPassword from './Pages/Authentiction/ResetPassword';
+import {BACK_URL} from '../ENV'
 
 function App() {
   const [userId, setUserId] = useState('');
@@ -26,7 +27,7 @@ function App() {
 
   const getUser = async (token) => {
     try {
-      const response = await axios.get('http://localhost:3001/api/check-user', {
+      const response = await axios.get(`${BACK_URL}/api/check-user`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
@@ -48,7 +49,7 @@ function App() {
     if (!token || !userId) return;
 
     try {
-      const response = await axios.get(`http://localhost:3001/api/getUser/${userId}`, {
+      const response = await axios.get(`${BACK_URL}/api/getUser/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

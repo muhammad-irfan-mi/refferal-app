@@ -4,10 +4,10 @@ import '../../assets/style/wallet.css'
 import { CiSquarePlus } from "react-icons/ci";
 import { GlobalContext } from '../../context/Global';
 import axios from 'axios';
+import {BACK_URL} from '../../../ENV'
 
 const Wallet = () => {
   const globalData = useContext(GlobalContext);
-  console.log("Heyyyyyyyyyyyyyyyyyyyyyyy", globalData.refCount)
   const userPoint = globalData.global.point.point;
   const userId = globalData.global.user._id
   const approved = globalData.global.user.isApproved
@@ -44,7 +44,7 @@ const Wallet = () => {
     formData.append('userId', userId);
 
     try {
-      const response = await fetch('http://localhost:3001/api/approve', {
+      const response = await fetch(`${BACK_URL}/api/approve`, {
         method: 'POST',
         body: formData
       });
@@ -74,7 +74,7 @@ const Wallet = () => {
   const handleWithdraw = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post(`http://localhost:3001/api/balance/${userId}`, formData, {
+      const response = await axios.post(`${BACK_URL}/api/balance/${userId}`, formData, {
         headers: {
           'Content-Type': 'application/json',
         }

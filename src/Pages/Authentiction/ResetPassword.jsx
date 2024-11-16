@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import {BACK_URL} from '../../../ENV'
 
 
 const ResetPassword = () => {
@@ -12,7 +13,7 @@ const ResetPassword = () => {
     try {
       console.log("reset password using otp")
       console.log({email,otp,newPassword})
-      const response = await axios.post(`http://localhost:3001/api/reset`, {
+      const response = await axios.post(`${BACK_URL}/api/reset`, {
         email,
         otp,
         newPassword,

@@ -4,6 +4,7 @@ import '../../assets/style/ledger.css'
 import WithdrawHistoryModal from '../../component/WithdrawHistoryModal';
 import { GlobalContext } from '../../context/Global';
 import axios from 'axios';
+import {BACK_URL} from '../../../ENV'
 
 function Ledger() {
 
@@ -16,7 +17,7 @@ function Ledger() {
     const fetchReferrals = async () => {
         const token = localStorage.getItem('authToken');
         console.log("fetching data")
-        const res = await axios.get(`http://localhost:3001/api/refs/${context.global.user._id}`, {
+        const res = await axios.get(`${BACK_URL}/api/refs/${context.global.user._id}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -27,7 +28,7 @@ function Ledger() {
     }
     const fetchWithDrawReq = async () => {
         try {
-            const res = await axios.get(`http://localhost:3001/api/balance/${context.global.user._id}`, {
+            const res = await axios.get(`${BACK_URL}/api/balance/${context.global.user._id}`, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -35,10 +36,8 @@ function Ledger() {
             
             const balanceData = Array.isArray(res.data) ? res.data : [res.data];
 
-            console.log(balanceData, "AmannnnnnygdsfhkjssAJSDHKBVSJKALJDKAJDBVSCKAXNCBSKDJBVJ")
             setMyWidthDraws(balanceData);
         } catch (error) {
-            console.error("Error fetching withdraw requests:", error);
             setMyWidthDraws([]);
         }
     };
@@ -62,7 +61,6 @@ function Ledger() {
         fetchWithDrawReq()
     }, [])
 
-    console.log("myWidthDrawsghjgfdsaSDFGHJKHGFDSAasdghjk", myWidthDraws)
 
     return (
         <>

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useState } from 'react'
 import { GlobalContext } from '../context/Global'
+import {BACK_URL} from '../../ENV'
 
 function ProfileModal(props) {
     const globalData = useContext(GlobalContext)
@@ -23,7 +24,7 @@ function ProfileModal(props) {
     const hanldeform = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.put(`http://localhost:3001/api/updateUser/${userID}`, formData, {
+            const response = await axios.put(`${BACK_URL}/api/updateUser/${userID}`, formData, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${token}`

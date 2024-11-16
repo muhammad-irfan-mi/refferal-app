@@ -7,6 +7,7 @@ import { FaEdit } from "react-icons/fa";
 import { GlobalContext } from '../../context/Global';
 import axios from 'axios';
 import ProfileModal from '../../component/ProfileModal';
+import {BACK_URL} from '../../../ENV'
 
 const Profile = () => {
     const [modal, setModal] = useState(false);
@@ -25,7 +26,7 @@ const Profile = () => {
             try {
                 const token = localStorage.getItem('authToken');
 
-                const response = await axios.get(`http://localhost:3001/api/getUser/${globalId}`, {
+                const response = await axios.get(`${BACK_URL}/api/getUser/${globalId}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -72,9 +73,9 @@ const Profile = () => {
 
                         {/* Profile Details */}
                         <div className="profile-info py-3 px-4">
-                            <div className='edit'>
+                            {/* <div className='edit'>
                                 <FaEdit size={29} className='mb-3' onClick={handleProfileModal} />
-                            </div>
+                            </div> */}
                             <h2 className="mb-3">Profile Details</h2>
                             <div className='p-0'>
                                 <p><h5>Name: &nbsp;</h5>{profile.fname} {profile.lname}</p>
@@ -90,7 +91,7 @@ const Profile = () => {
                         
                     </div>
             </div>
-            {!modal ? '' : <ProfileModal closeModal={handleProfileModal} />}
+            {/* {!modal ? '' : <ProfileModal closeModal={handleProfileModal} />} */}
         </div>
     );
 };
