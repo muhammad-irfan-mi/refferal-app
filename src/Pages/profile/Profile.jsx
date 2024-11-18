@@ -73,9 +73,9 @@ const Profile = () => {
 
                         {/* Profile Details */}
                         <div className="profile-info py-3 px-4">
-                            {/* <div className='edit'>
+                            <div className='edit'>
                                 <FaEdit size={29} className='mb-3' onClick={handleProfileModal} />
-                            </div> */}
+                            </div>
                             <h2 className="mb-3">Profile Details</h2>
                             <div className='p-0'>
                                 <p><h5>Name: &nbsp;</h5>{profile.fname} {profile.lname}</p>
@@ -91,7 +91,7 @@ const Profile = () => {
                         
                     </div>
             </div>
-            {/* {!modal ? '' : <ProfileModal closeModal={handleProfileModal} />} */}
+            {!modal ? '' : <ProfileModal closeModal={handleProfileModal} />}
         </div>
     );
 };
