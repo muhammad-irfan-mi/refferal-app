@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../assets/style/home.css';
 import reward from '../../assets/media/reward.jpg'
 import friendReward from '../../assets/media/friend-reward.jpg'
+import easyPaisa from '../../assets/media/easypaisa.jpg'
 import earn from '../../assets/media/earn.jpg'
 import { GlobalContext } from '../../context/Global';
 import { useEffect } from 'react';
@@ -34,6 +35,15 @@ const Home = () => {
         <h5 className="badge bg-primary p-3 m-2"><strong className='h5'>Your Total Referral: ₹({refNumber}) </strong></h5>
       </div>
       <div >
+        <div className="question-answer-box p-3 shadow-sm mb-4">
+          <div className="d-flex align-items-start">
+            <img src={easyPaisa} alt="Invite" className="img-fluid me-3" />
+            <div>
+              <h4>First Pay & Approve Your Account</h4>
+              <h2 className='text-light'>0328 1520177</h2>
+            </div>
+          </div>
+        </div>
         <div className="question-answer-box p-3 shadow-sm mb-4">
           <div className="d-flex align-items-start">
             <img src={reward} alt="Invite" className="img-fluid me-3" />
