@@ -1,7 +1,7 @@
 import './App.css';
 import Signup from './Pages/Authentiction/Signup';
 import Login from './Pages/Authentiction/Login';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import Navbar from './component/Navbar';
 import './assets/style/navbar.css';
 import Home from './Pages/Home/Home';
@@ -16,7 +16,7 @@ import axios from 'axios';
 import { GlobalContext } from './context/Global';
 import ForgetPassword from './Pages/Authentiction/ForgetPassword';
 import ResetPassword from './Pages/Authentiction/ResetPassword';
-import {BACK_URL} from '../ENV'
+import { BACK_URL } from '../ENV'
 
 function App() {
   const [userId, setUserId] = useState('');
@@ -116,19 +116,19 @@ function Content() {
 
       <Routes>
         {/* Public Routes */}
-        <Route path='/' element={<Login />} />
+        <Route path='/' element={token ? <Navigate to="/home" /> : <Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/forget' element={<ForgetPassword />} />
+        <Route path='/reset' element={<ResetPassword />} />
+        <Route path='/block' element={<Block />} />
         <Route path='/*' element={<NoData />} />
 
         {/* Private Routes */}
-        <Route path='/home' element={<Home />} />
-        <Route path='/ledger' element={<Ledger />} />
-        <Route path='/wallet' element={<Wallet />} />
-        <Route path='/task' element={<Task />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/block' element={<Block />} />
-        <Route path='/forget' element={<ForgetPassword/>} />
-        <Route path='/reset' element={<ResetPassword/>} />
+        <Route path='/home' element={token ? <Home /> : <Navigate to="/" />} />
+        <Route path='/ledger' element={token ? <Ledger /> : <Navigate to="/" />} />
+        <Route path='/wallet' element={token ? <Wallet /> : <Navigate to="/" />} />
+        <Route path='/task' element={token ? <Task /> : <Navigate to="/" />} />
+        <Route path='/profile' element={token ? <Profile /> : <Navigate to="/" />} />
       </Routes>
     </>
   );
