@@ -20,11 +20,11 @@ const ResetPassword = () => {
         otp,
         newPassword,
       });
-      // if (response.status === 200) {
+      if (response.status === 200) {
         console.log("response is", response.data)
         setMessage(response.data.message);
-      //   navigate('/')
-      // }
+        navigate('/')
+      }
 
     } catch (error) {
       setMessage(error.response.data.message);

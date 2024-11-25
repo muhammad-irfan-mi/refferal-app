@@ -20,12 +20,14 @@ const Home = () => {
   console.log(userBalance)
 
   useEffect(() => {
-    const hasRefreshed = sessionStorage.getItem("hasRefreshed");
+    const hasRefreshed = localStorage.getItem("hasRefreshed");
+    console.log(hasRefreshed, "hasRefreshedgdfdgkfhsvadjfkhgdsg")
     if (!hasRefreshed) {
-        sessionStorage.setItem("hasRefreshed", "true");
-        window.location.reload();
+      localStorage.setItem("hasRefreshed", "true");
+      window.location.reload(); 
     }
-}, []);
+  }, []);
+
   return (
     <div className="container-fluid bg-image">
       <div className="align-items-center home-top">
