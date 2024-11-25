@@ -118,7 +118,7 @@ const Wallet = () => {
               {!image && <CiSquarePlus size={29} className='upload-icon' onClick={() => document.getElementById('fileInput').click()} />}
             </div>
             <button className='btn btn-dark mt-3' onClick={handleUpload}>Upload</button>
-          </div> : <div className="col-md-7 text-light">
+          </div> : userBalance >= 500 ? <div className="col-md-7 text-light">
             <div className='d-flex justify-content-between'>
               <h3 className="mb-4">Withdraw Balance</h3>
               {/* <button>WithDraw</button> */}
@@ -131,7 +131,7 @@ const Wallet = () => {
                 <button type='submit'>Withdraw</button>
               </form>
             </div>
-          </div>
+          </div>: <div className='col-md-7 text-light'><h1>Note: </h1><p className="fs-4">Cannot withdraw till 500 Rs Balance</p></div>
         }
 
       </div>

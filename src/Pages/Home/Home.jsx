@@ -42,6 +42,7 @@ const Home = () => {
             <img src={easyPaisa} alt="Invite" className="img-fluid me-3" />
             <div>
               <h4>First Pay & Approve Your Account</h4>
+              <h2 className='text-light'>Muzzafar Iqbal</h2>
               <h2 className='text-light'>0328 1520177</h2>
             </div>
           </div>

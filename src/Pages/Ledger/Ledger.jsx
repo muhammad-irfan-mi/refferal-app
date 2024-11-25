@@ -110,7 +110,7 @@ function Ledger() {
 
                                         <td className='ml-4 ledger-user-info'>{user.company}</td>
                                         <td className='ml-4 ledger-user-info'>{user.accountId}</td>
-                                        <td className='ml-4 ledger-user-info'>{user.amount}</td>
+                                        <td className='ml-4 ledger-user-info'>{user.amount /10}</td>
                                         <td className='ml-4 ledger-user-info'>{user.isApproved == 'true' ? "Approved" : "Pending"}</td>
                                     </tr>
                                 )) : ''}
